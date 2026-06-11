@@ -1,19 +1,24 @@
-# Campus-rental
+# CampusRent
 
-## Zero-Human Multi-Agent Platform
+CampusRent is a mobile-first peer-to-peer student rental marketplace prototype built with Next.js.
 
-This repository is managed by the Zero-Human multi-agent platform.
+## MVP scope
+- Browse nearby rental listings by campus/city
+- Highlight categories, pricing, deposits, and availability
+- Show rental request lifecycle states
+- Surface admin moderation examples
+- Present a clean code structure for future API and database integration
 
-### Getting Started
+## Run locally
+```bash
+npm install
+npm run dev
+```
 
-1. Configure your agents in the platform dashboard
-2. Create issues or feature requests
-3. Agents will automatically work on tasks
+Then open `http://localhost:3000`.
 
-### Documentation
-
-- See `docs/` for project documentation
-- See `.paperclip/` for platform configuration
-- See `memory-bank/` for agent memory and context
-
-For more information, visit the Zero-Human platform documentation.
+## Project structure
+- `app/` - Next.js App Router pages and styles
+- `components/` - reusable UI pieces
+- `data/` - mock marketplace data for the MVP preview
+- `docs/` - supporting notes for future contributors
