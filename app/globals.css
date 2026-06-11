@@ -1,0 +1,45 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --panel: #ffffff;
+  --text: #142033;
+  --muted: #5f6b7a;
+  --border: #dbe3ef;
+  --primary: #2864f0;
+  --primary-soft: #eaf1ff;
+  --warning: #c88400;
+  --active: #7b3ff2;
+}
+* { box-sizing: border-box; }
+html { font-family: Arial, Helvetica, sans-serif; background: var(--bg); }
+body { margin: 0; color: var(--text); }
+button, input, select { font: inherit; }
+button { border: none; border-radius: 999px; padding: 0.8rem 1rem; background: var(--primary); color: white; cursor: pointer; }
+.pageShell { max-width: 1200px; margin: 0 auto; padding: 24px; }
+.hero { display: grid; grid-template-columns: 1.6fr 1fr; gap: 20px; align-items: stretch; margin-bottom: 20px; }
+.hero h1, .panel h2, .heroCard h2 { margin: 0 0 12px; }
+.hero > div, .panel, .heroCard { background: var(--panel); border: 1px solid var(--border); border-radius: 24px; padding: 24px; box-shadow: 0 8px 24px rgba(20, 32, 51, 0.06); }
+.hero p, .panel p, .panel li, .heroCard li { color: var(--muted); line-height: 1.5; }
+.badge, .chip { display: inline-flex; align-items: center; gap: 6px; padding: 0.35rem 0.7rem; border-radius: 999px; background: var(--primary-soft); color: var(--primary); font-size: 0.9rem; font-weight: 700; }
+.eyebrow { margin: 0 0 0.35rem; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.82rem; color: var(--primary); font-weight: 700; }
+.sectionHeading { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+.filtersGrid, .infoGrid, .dashboardGrid { display: grid; gap: 16px; }
+.filtersGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.filtersGrid label { display: flex; flex-direction: column; gap: 8px; color: var(--muted); font-weight: 600; }
+.filtersGrid input, .filtersGrid select { width: 100%; border: 1px solid var(--border); border-radius: 14px; padding: 0.9rem 1rem; background: #fff; color: var(--text); }
+.helperText { margin: 12px 0 0; }
+.listingGrid { display: grid; gap: 16px; }
+.listingCard { display: grid; grid-template-columns: 88px 1fr auto; gap: 16px; align-items: center; padding: 18px; border: 1px solid var(--border); border-radius: 20px; background: linear-gradient(180deg, #fff 0%, #fbfdff 100%); }
+.listingIcon { display: grid; place-items: center; width: 88px; height: 88px; border-radius: 20px; font-size: 2rem; background: var(--primary-soft); }
+.listingTopRow, .metaRow { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--muted); }
+.listingBody h3 { margin: 10px 0 8px; }
+.pricePanel { min-width: 150px; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+.dashboardGrid, .infoGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.statusList { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.statusList li { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.statusList li:last-child { border-bottom: 0; padding-bottom: 0; }
+.status { display: inline-flex; align-items: center; justify-content: center; min-width: 96px; padding: 0.45rem 0.75rem; border-radius: 999px; font-weight: 700; }
+.statusRequested { background: #fff4da; color: var(--warning); }
+.statusApproved { background: #e7f0ff; color: var(--primary); }
+.statusActive { background: #efe7ff; color: var(--active); }
+@media (max-width: 900px) { .hero, .dashboardGrid, .infoGrid, .filtersGrid, .listingCard { grid-template-columns: 1fr; } .pricePanel { align-items: flex-start; } .pageShell { padding: 16px; } }
