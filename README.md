@@ -22,3 +22,10 @@ Then open `http://localhost:3000`.
 - `components/` - reusable UI pieces
 - `data/` - mock marketplace data for the MVP preview
 - `docs/` - supporting notes for future contributors
+
+## Next implementation steps
+
+1. Implement location-based filtering and searching
+2. Add authentication for renter/owner/admin roles
+3. Wire category, price, and distance filters
+4. Introduce tests, linting gates, and form validation

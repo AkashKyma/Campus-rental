@@ -1,27 +1,24 @@
 export default function ListingCard({ listing }) {
   return (
-    <article className="listingCard">
-      <div className="listingIcon" aria-hidden="true">{listing.image}</div>
+    <article className="listingCard listingCardOlx">
+      <div className="listingImageWrap">
+        <img src={listing.image} alt={listing.title} className="listingImage" />
+      </div>
       <div className="listingBody">
-        <div className="listingTopRow">
-          <span className="chip">{listing.category}</span>
-          <span>{listing.distanceKm} km away</span>
+        <div className="priceRow">
+          <strong>₹{listing.pricePerDay}/day</strong>
+          <span className="listingDistance">{listing.distanceKm.toFixed(1)} km away</span>
         </div>
         <h3>{listing.title}</h3>
         <p>{listing.description}</p>
         <div className="metaRow">
-          <span>{listing.campus}, {listing.city}</span>
-          <span>⭐ {listing.rating}</span>
+          <span>{listing.area}, {listing.city}</span>
+          <span>Posted {listing.postedDate}</span>
         </div>
         <div className="metaRow">
-          <span>Owner: {listing.owner}</span>
-          <span>{listing.availableFrom} → {listing.availableTo}</span>
+          <span>{listing.campus}</span>
+          <span>⭐ {listing.rating} • Deposit ₹{listing.deposit}</span>
         </div>
-      </div>
-      <div className="pricePanel">
-        <strong>₹{listing.pricePerDay}/day</strong>
-        <span>Deposit ₹{listing.deposit}</span>
-        <button type="button">Request rental</button>
       </div>
     </article>
   );
